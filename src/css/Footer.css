@@ -1,0 +1,8 @@
+.footer {
+    position: fixed; /* Position fixe pour maintenir le footer en bas même lors du défilement */
+    bottom: 0; /* Aligner le bas du footer avec le bas de la fenêtre */
+    width: 100%; /* Largeur totale */
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte */
+    padding: 20px; /* Espacement intérieur */
+  }

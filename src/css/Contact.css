@@ -1,0 +1,45 @@
+/* Contact.css */
+.contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .contact h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .contact-info h2 {
+    font-size: 24px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .additional-info {
+    margin-top: 40px;
+  }
+  
+  .additional-info h2 { 
+    font-size: 24px;
+  }
+  
+  .additional-info p {
+    line-height: 1.5;
+  }
+  

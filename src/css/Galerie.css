@@ -1,0 +1,18 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0; 
+  }
+  
+  .row img {
+    max-width: 100%; /* Pour s'assurer que les images ne dépassent pas de leur conteneur */
+    max-height: 300px; /* Ajustez la hauteur maximale des images selon vos besoins */
+    margin: 0 5px; /* Espacement entre les images */
+  }
+  
