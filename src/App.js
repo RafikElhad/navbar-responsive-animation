@@ -13,6 +13,7 @@ import Galerie from './pages/Galerie';
 function App() {
   
   return (
+    <>
     <Router>
       <div className="App">
         <Navbar />
@@ -24,10 +25,12 @@ function App() {
             <Route path="/service" element={<motion.div key="service" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 2 }}><Service /></motion.div>} />
             <Route path="/galerie" element={<motion.div key="galerie" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 2 }}><Galerie /></motion.div>} />
           </Routes>
-        </AnimatePresence>
+        </AnimatePresence>  
         <Footer />
       </div>
     </Router>
+    </>
+    
   );
 }
 

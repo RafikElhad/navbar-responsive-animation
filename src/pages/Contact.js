@@ -26,6 +26,7 @@ function Contact() {
           <h2>Informations Supplémentaires</h2>
           <p>Ceci est un paragraphe d'informations supplémentaires sur l'entreprise et comment nous contacter.</p>
         </div>
+        
     </div>
     </>
   )

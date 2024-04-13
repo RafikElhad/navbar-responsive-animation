@@ -1,18 +1,60 @@
+
+   /* Style pour la galerie */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px;
+  margin-top: 50px; 
+}
+
+/* Style pour chaque rangée d'images */
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacement entre les rangées d'images */ 
+ 
+}
+
+/* Style pour les images */
+.row img {
+  width: 300px; /* Taille initiale des images */
+  height: auto; /* Permet aux images de conserver leur proportion */
+  margin: 0 10px; /* Espacement entre les images */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  transition: transform 0.3s ease; /* Animation de transition */
   
+}
+
+/* Animation au survol des images */
+.row img:hover {
+  transform: scale(1.05); /* Zoom au survol */
+}
+
+/* Styles pour les résolutions de tablette */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
   .row {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0; 
+    flex-wrap: wrap; /* Permettre le retour à la ligne des éléments */
+    justify-content: space-between; /* Répartir les éléments sur toute la ligne */
   }
-  
+
   .row img {
-    max-width: 100%; /* Pour s'assurer que les images ne dépassent pas de leur conteneur */
-    max-height: 300px; /* Ajustez la hauteur maximale des images selon vos besoins */
-    margin: 0 5px; /* Espacement entre les images */
+    width: calc(50% - 20px); /* Utiliser la moitié de la largeur de la ligne avec un petit espacement */
+    margin: 10px; /* Espacement égal autour de chaque image */
   }
-  
+} 
+
+
+/* Media Query pour les appareils mobiles */
+@media only screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    align-items: center; /* Centrer les images horizontalement */
+  }
+
+  .row img {
+    width: calc(100% - 20px); /* Utiliser toute la largeur disponible avec un petit espacement */
+    margin: 10px; /* Espacement égal autour de chaque image */
+  }  
+}

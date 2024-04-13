@@ -1,0 +1,31 @@
+.share-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .share-icons img {
+    width: 30px; /* Ajustez la taille selon vos besoins */
+    height: 30px; /* Ajustez la taille selon vos besoins */
+    margin: 0 10px; /* Espace entre les icônes */
+    cursor: pointer; /* Curseur pointer pour indiquer qu'il est cliquable */
+    transition: transform 0.3s ease; /* Animation de transition */
+  }
+  
+  .share-icons img:hover {
+    transform: scale(1.1); /* Effet d'agrandissement au survol */
+  }
+  
+  @media (max-width: 768px) {
+    .share-icons {
+      flex-wrap: wrap; /* Pour que les icônes passent à la ligne sur les résolutions plus petites */
+    }
+    
+    .share-icons img, .share-icons svg {
+      width: 30px; /* Taille réduite pour les résolutions mobiles */
+      height: 30px; /* Taille réduite pour les résolutions mobiles */
+      margin: 5px; /* Espacement réduit pour les résolutions mobiles */
+     transition: transform 0.3s ease; /* Animation de transition */
+
+    }
+  }
