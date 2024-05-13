@@ -1,10 +1,50 @@
 * {
     margin: 0;
     padding: 0; 
-     box-sizing: border-box;  
+    box-sizing: border-box;  
 }
 
  .App {
      height: 100vh; 
 } 
+
+.social-media-buttons a { 
+    margin-right: 10px; /* Ajoute un espace de 10 pixels à droite de chaque lien */
+ }
+
+  .social-media-buttons {
+    margin-left: 45%;
+  }
+  .social-media-buttons a :hover {
+    color: #fff; 
+  } 
+
+  @keyframes arrowAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
  
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Assurez-vous que ce z-index est suffisamment élevé */
+  }
+  
+  .scroll-to-top img { 
+    width: 50px; /* Ajustez la taille de l'image selon vos préférences */
+    cursor: pointer; /* Change le curseur lorsque survolé pour indiquer que c'est cliquable */
+    animation: arrowAnimation 0.5s ease; /* Ajouter l'animation à l'image */
+  }
+
+  /* Style lorsqu'on survole la flèche */ 
+.scroll-to-top img:hover {
+  opacity: 0.7; /* Réduire légèrement l'opacité pour indiquer qu'il est cliquable */
+}

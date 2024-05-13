@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/Contact.css' 
 
+
 function Contact() {
   return (
     <> 
@@ -24,9 +25,10 @@ function Contact() {
         </div>
         <div className="additional-info">
           <h2>Informations Supplémentaires</h2>
+          
           <p>Ceci est un paragraphe d'informations supplémentaires sur l'entreprise et comment nous contacter.</p>
         </div>
-        
+         
     </div>
     </>
   )

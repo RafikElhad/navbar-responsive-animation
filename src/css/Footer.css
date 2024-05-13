@@ -4,7 +4,7 @@
     width: 100%; /* Largeur totale */
     background-color: #333; /* Couleur de fond du footer */
     color: #fff; /* Couleur du texte */
-    padding: 20px; /* Espacement intérieur */
+    padding: 15px; /* Espacement intérieur */
     /* height: 250px;   */ 
     position: relative; /* Cache le footer par défaut */
     display: none;

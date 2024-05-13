@@ -18,7 +18,7 @@
 
 /* Style pour les images */
 .row img {
-  width: 300px; /* Taille initiale des images */
+  width: 290px; /* Taille initiale des images */
   height: auto; /* Permet aux images de conserver leur proportion */
   margin: 0 10px; /* Espacement entre les images */
   border-radius: 8px; /* Coins arrondis */

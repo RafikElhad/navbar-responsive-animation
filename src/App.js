@@ -9,6 +9,8 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import Service from './pages/Service';
 import Galerie from './pages/Galerie';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   
@@ -26,6 +28,7 @@ function App() {
             <Route path="/galerie" element={<motion.div key="galerie" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 2 }}><Galerie /></motion.div>} />
           </Routes>
         </AnimatePresence>  
+        <ScrollToTop />
         <Footer />
       </div>
     </Router>

@@ -5,19 +5,31 @@ function Galerie() {
   return (
     <>
      <div className="gallery">
+         <div className="row">
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+        </div> 
+         <div className="row">
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" />  
+        </div> 
         <div className="row">
-          <img src={photo} alt="facebook" /> 
-          <img src={photo} alt="facebook" />  
-          <img src={photo} alt="facebook" /> 
-          <img src={photo} alt="facebook" /> 
-        </div>
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" />  
+        </div> 
         <div className="row">
-        <img src={photo} alt="facebook" /> 
-        <img src={photo} alt="facebook" /> 
-        <img src={photo} alt="facebook" /> 
-        <img src={photo} alt="facebook" />  
-        </div>
-      {/* Ajoutez d'autres rangées d'images si nécessaire */}
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" /> 
+            <img src={photo} alt="facebook" />  
+        </div> 
+     
     </div>
     </> 
   )
