@@ -31,6 +31,41 @@
 .row img:hover {
   transform: scale(1.05); /* Zoom au survol */
 }
+.cover {
+  position: relative;
+  width: 100%;
+  height: 70vh; 
+  background-color: blue;
+  color: blue;
+  overflow: hidden;
+}
+
+.cover-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.cover-title {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.fade-slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Styles pour les résolutions de tablette */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -43,6 +78,7 @@
     width: calc(50% - 20px); /* Utiliser la moitié de la largeur de la ligne avec un petit espacement */
     margin: 10px; /* Espacement égal autour de chaque image */
   }
+  
 } 
 
 

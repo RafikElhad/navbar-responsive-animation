@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="footer-content"> 
         <Link to="/contact" className="footer-link">Nous Contacter</Link> 
         <SocialMediaButtons /> 
-        <h1>Ménuiserie Elhad Ahamada<span className="orange">.</span></h1>  
+        <h1>la satisfaction du client est notre propriété<span className="orange">.</span></h1>  
         <div className="copyright">© 2024 Ménuiserie Elhad Ahamada.</div> 
       </div>
     </footer>

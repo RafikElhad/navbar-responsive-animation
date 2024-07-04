@@ -1,45 +1,43 @@
+/* Footer Styles */
 .footer {
-   /* position: fixed; Position fixe pour maintenir le footer en bas même lors du défilement */
-    bottom: 0; /* Aligner le bas du footer avec le bas de la fenêtre */
-    width: 100%; /* Largeur totale */
-    background-color: #333; /* Couleur de fond du footer */
-    color: #fff; /* Couleur du texte */
-    padding: 15px; /* Espacement intérieur */
-    /* height: 250px;   */ 
-    position: relative; /* Cache le footer par défaut */
-    display: none;
-    
-  }
-  .footer-link {
-    color: #fff;
-    
-  }
-  .footer.show {
-    display: block; /* Affiche le footer lorsque la classe 'show' est présente */
-    
-  }
-  
-  /* Pour assurer que le footer ne chevauche pas le contenu principal */
-  .main-content {
-    padding-bottom: 60px; /* Ajustez la hauteur du footer en conséquence */
-  }
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  position: relative;
+  display: none;
+}
 
-  .footer-visible {
-    display: block;
-  }
-  
-  .footer-hidden {
-    display: none;
-  }
-  footer h1 {
-    color: #fff; 
-    text-align: center; 
-    padding-top: 80px; 
-  } 
-  .copyright 
-  {
-    text-align: center; 
-    font-weight: bold; 
-    padding-top: 20px; 
-    color: #d6c8c8; 
-  }   
+.footer-link {
+  color: #fff;
+}
+
+.footer.show {
+  display: block;
+}
+
+.main-content {
+  padding-bottom: 60px;
+}
+
+.footer-visible {
+  display: block;
+}
+
+.footer-hidden {
+  display: none;
+}
+
+footer h1 {
+  color: #fff;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.copyright {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+  color: #d6c8c8;
+} 
