@@ -43,9 +43,6 @@ const ContactForm = () => {
       <label>Nom</label>
       <input type="text" name="nom" value={formData.nom} onChange={handleChange} required />
       
-      {/* <label>Prénom</label>
-      <input type="text" name="prenom" value={formData.prenom} onChange={handleChange} required /> */}
-      
       <label>Téléphone</label>
       <input type="text" name="telephone" value={formData.telephone} onChange={handleChange} required />
       
