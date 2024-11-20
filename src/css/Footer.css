@@ -40,4 +40,38 @@ footer h1 {
   font-weight: bold;
   padding-top: 20px;
   color: #d6c8c8;
-} 
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 768px) {
+  footer h1 {
+    font-size: 18px; /* Réduit la taille du titre sur les petits écrans */
+    padding-top: 40px; /* Réduit l'espace au-dessus du titre */
+  }
+
+  .copyright {
+    font-size: 14px; /* Réduit la taille de la police pour les écrans plus petits */
+    padding-top: 10px; /* Réduit l'espacement au-dessus de la section copyright */
+  }
+
+  .footer {
+    padding: 10px; /* Réduit l'espace interne sur les petits écrans */
+  }
+}
+
+/* Responsiveness for mobile screens */
+@media (max-width: 480px) {
+  footer h1 {
+    font-size: 16px; /* Taille encore plus petite pour les très petits écrans */
+    padding-top: 20px;
+  }
+
+  .copyright {
+    font-size: 12px; /* Réduit encore la taille de la police pour les très petits écrans */
+    padding-top: 5px;
+  }
+
+  .footer {
+    padding: 8px; /* Réduit encore l'espace interne */
+  }
+}

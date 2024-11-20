@@ -1,84 +1,201 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import '../css/About.css' 
+import facebook from '../assets/facebook_share.png';
 
+const About = () => {
+  // Initialiser les animations AOS
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
-export default function About() {
   return (
-    <>
-     <h1>Home</h1>   
-      <p>Les Comores, un archipel de quatre îles situé dans l'océan Indien, ont une histoire riche et complexe qui remonte à des millénaires. Les premières traces d'occupation humaine remontent à environ 2000 av. J.-C., lorsque des populations bantoues venues d'Afrique continentale ont commencé à s'installer dans la région. Ces premiers habitants ont développé des sociétés agricoles prospères, vivant en harmonie avec la nature luxuriante de l'archipel, et établissant des échanges avec d'autres civilisations de l'océan Indien.
+    <div>
+      {/* Bannière de l'entreprise */}
+      <div className="about-hero">
+        <img
+          src="/assets/cover_photo.png" // Remplacez par l'image de l'entreprise
+          alt="Menuiserie Elhad Ahamada"
+          className="hero-image"
+        />
+        <div className="hero-overlay">
+          <h1 className="hero-title">Menuiserie Elhad Ahamada</h1>
+          <p className="hero-subtitle">
+            Artisanat de qualité. Créations uniques. Passion et innovation.
+          </p>
+        </div>
+      </div>
 
-L'histoire des Comores est étroitement liée à celle des grands empires et des puissances maritimes qui ont exercé leur influence dans la région. Au cours des siècles, les Comores ont été visitées et contrôlées par des navigateurs arabes, des marchands persans, des explorateurs européens et des colons français. Ces interactions ont façonné la culture, la langue et la société comoriennes, créant un mélange unique d'influences africaines, arabes et européennes.
+      {/* Section About */}
+      <section className="about-section container">
+        {/* Introduction */}
+        <div className="row align-items-center mb-5">
+          <div
+            className="col-md-6 about-text"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <h2 className="section-title">À propos de nous</h2>
+            <p>
+              Bienvenue chez <strong>Menuiserie Elhad Ahamada</strong>, où
+              l'artisanat rencontre l'innovation. Depuis notre fondation, nous
+              sommes dédiés à créer des solutions sur mesure en bois, alliant
+              qualité et durabilité.
+            </p>
+          </div>
+          <div
+            className="col-md-6"
+            data-aos="fade-left"
+            data-aos-delay="400"
+          >
+            <img
+              src={facebook} // Remplacez par une image de l'atelier
+              alt="Atelier"
+              className="img-fluid rounded shadow-lg"
+            />
+          </div>
+        </div>
 
-Au 15e siècle, les Comores sont devenues un important centre de commerce d'épices, d'esclaves et d'autres produits précieux, attirant l'attention des puissances coloniales européennes. Les Portugais furent parmi les premiers à explorer l'archipel, suivi par les Français, les Britanniques et les Hollandais. Cependant, c'est la France qui finit par établir un contrôle durable sur les Comores au 19e siècle, en faisant une colonie française en 1912.
+        {/* Mission et vision */}
+        <div className="row align-items-center mb-5 flex-column-reverse flex-md-row">
+          <div
+            className="col-md-6"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <div className="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/example_video_id" // URL vidéo
+                title="Présentation entreprise"
+                className="video-frame shadow-lg"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+          <div
+            className="col-md-6 about-text"
+            data-aos="fade-left"
+            data-aos-delay="400"
+          >
+            <h3 className="section-subtitle">Notre mission et vision</h3>
+            <p>
+              Offrir des produits d’exception en bois tout en respectant
+              l’environnement et en garantissant la satisfaction de nos
+              clients.
+            </p>
+          </div>
+        </div>
 
-L'histoire coloniale des Comores a été marquée par l'exploitation économique, la domination politique et la résistance des populations locales. Malgré les efforts de la France pour intégrer les Comores dans son empire colonial, de nombreux habitants ont maintenu leur identité culturelle et leur lutte pour l'indépendance. Cette lutte a finalement abouti à l'indépendance des Comores en 1975, bien que l'archipel ait été secoué par des troubles politiques et des conflits internes depuis lors.
+        {/* Équipe */}
+        <div className="team-section text-center mb-5">
+          <h3 className="section-subtitle" data-aos="fade-up">
+            Rencontrez notre équipe
+          </h3>
+          <div className="row">
+            {/* Chef d'entreprise */}
+            <div className="col-md-4 col-sm-6" data-aos="zoom-in">
+              <img
+                src={facebook} // Photo chef d'entreprise
+                alt="Chef d'entreprise"
+                className="team-photo rounded-circle shadow-lg"
+              />
+              <h5>Chef d'Entreprise</h5>
+              <p>Elhad Ahamada</p>
+            </div>
+            {/* Membre d'équipe */}
+            <div className="col-md-4 col-sm-6" data-aos="zoom-in">
+              <img
+                src={facebook} // Photo membre équipe
+                alt="Membre équipe"
+                className="team-photo rounded-circle shadow-lg"
+              />
+              <h5>Responsable Atelier</h5>
+              <p>Nom du membre</p>
+            </div>
+            {/* Autre membre */}
+            <div className="col-md-4 col-sm-6" data-aos="zoom-in">
+              <img
+                src={facebook} // Autre photo membre équipe
+                alt="Membre équipe"
+                className="team-photo rounded-circle shadow-lg"
+              />
+              <h5>Designer</h5>
+              <p>Nom du membre</p>
+            </div>
+          </div>
+        </div>
+        {/* Carousel */}
+      <div className="project-carousel container mt-5" data-aos="fade-up">
+        <h3 className="section-subtitle text-center mb-4">Projets en Action</h3>
+        <div id="carouselProjects" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            {/* Slide 1 */}
+            <div className="carousel-item active">
+              <img
+                src={facebook} // Remplacez avec une image
+                className="d-block w-100 rounded shadow-lg"
+                alt="Projet en cours"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Projet de menuiserie</h5>
+                <p>Réalisation d'une table en bois massif.</p>
+              </div>
+            </div>
 
-Depuis leur indépendance, les Comores ont fait face à de nombreux défis, notamment des troubles politiques, des tensions ethniques, des difficultés économiques et des catastrophes naturelles. Malgré ces défis, les Comores ont progressé dans de nombreux domaines, y compris l'éducation, la santé et le développement économique. Aujourd'hui, les Comores sont un pays diversifié et dynamique, avec une population jeune et une culture vibrante, qui continue de s'adapter et de prospérer dans un monde en constante évolution.
-Les Comores, un archipel de quatre îles situé dans l'océan Indien, ont une histoire riche et complexe qui remonte à des millénaires. Les premières traces d'occupation humaine remontent à environ 2000 av. J.-C., lorsque des populations bantoues venues d'Afrique continentale ont commencé à s'installer dans la région. Ces premiers habitants ont développé des sociétés agricoles prospères, vivant en harmonie avec la nature luxuriante de l'archipel, et établissant des échanges avec d'autres civilisations de l'océan Indien.
+            {/* Slide 2 */}
+            <div className="carousel-item">
+              <img
+                src={facebook} // Remplacez avec une image
+                className="d-block w-100 rounded shadow-lg"
+                alt="Équipe au travail"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Notre équipe à l'œuvre</h5>
+                <p>Processus de fabrication avec nos machines modernes.</p>
+              </div>
+            </div>
 
-L'histoire des Comores est étroitement liée à celle des grands empires et des puissances maritimes qui ont exercé leur influence dans la région. Au cours des siècles, les Comores ont été visitées et contrôlées par des navigateurs arabes, des marchands persans, des explorateurs européens et des colons français. Ces interactions ont façonné la culture, la langue et la société comoriennes, créant un mélange unique d'influences africaines, arabes et européennes.
+            {/* Slide 3 */}
+            <div className="carousel-item">
+              <img
+                src={facebook} // Remplacez avec une image
+                className="d-block w-100 rounded shadow-lg"
+                alt="Machines utilisées"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Nos outils en action</h5>
+                <p>Des machines précises pour un travail de qualité.</p>
+              </div>
+            </div>
+          </div>
 
-Au 15e siècle, les Comores sont devenues un important centre de commerce d'épices, d'esclaves et d'autres produits précieux, attirant l'attention des puissances coloniales européennes. Les Portugais furent parmi les premiers à explorer l'archipel, suivi par les Français, les Britanniques et les Hollandais. Cependant, c'est la France qui finit par établir un contrôle durable sur les Comores au 19e siècle, en faisant une colonie française en 1912.
+          {/* Contrôles du carousel */}
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselProjects"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Précédent</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselProjects"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </div>
 
-L'histoire coloniale des Comores a été marquée par l'exploitation économique, la domination politique et la résistance des populations locales. Malgré les efforts de la France pour intégrer les Comores dans son empire colonial, de nombreux habitants ont maintenu leur identité culturelle et leur lutte pour l'indépendance. Cette lutte a finalement abouti à l'indépendance des Comores en 1975, bien que l'archipel ait été secoué par des troubles politiques et des conflits internes depuis lors.
+      </section>
+    </div>
+  );
+};
 
-Depuis leur indépendance, les Comores ont fait face à de nombreux défis, notamment des troubles politiques, des tensions ethniques, des difficultés économiques et des catastrophes naturelles. Malgré ces défis, les Comores ont progressé dans de nombreux domaines, y compris l'éducation, la santé et le développement économique. Aujourd'hui, les Comores sont un pays diversifié et dynamique, avec une population jeune et une culture vibrante, qui continue de s'adapter et de prospérer dans un monde en constante évolution.
-Les Comores, un archipel de quatre îles situé dans l'océan Indien, ont une histoire riche et complexe qui remonte à des millénaires. Les premières traces d'occupation humaine remontent à environ 2000 av. J.-C., lorsque des populations bantoues venues d'Afrique continentale ont commencé à s'installer dans la région. Ces premiers habitants ont développé des sociétés agricoles prospères, vivant en harmonie avec la nature luxuriante de l'archipel, et établissant des échanges avec d'autres civilisations de l'océan Indien.
-
-L'histoire des Comores est étroitement liée à celle des grands empires et des puissances maritimes qui ont exercé leur influence dans la région. Au cours des siècles, les Comores ont été visitées et contrôlées par des navigateurs arabes, des marchands persans, des explorateurs européens et des colons français. Ces interactions ont façonné la culture, la langue et la société comoriennes, créant un mélange unique d'influences africaines, arabes et européennes.
-
-Au 15e siècle, les Comores sont devenues un important centre de commerce d'épices, d'esclaves et d'autres produits précieux, attirant l'attention des puissances coloniales européennes. Les Portugais furent parmi les premiers à explorer l'archipel, suivi par les Français, les Britanniques et les Hollandais. Cependant, c'est la France qui finit par établir un contrôle durable sur les Comores au 19e siècle, en faisant une colonie française en 1912.
-
-L'histoire coloniale des Comores a été marquée par l'exploitation économique, la domination politique et la résistance des populations locales. Malgré les efforts de la France pour intégrer les Comores dans son empire colonial, de nombreux habitants ont maintenu leur identité culturelle et leur lutte pour l'indépendance. Cette lutte a finalement abouti à l'indépendance des Comores en 1975, bien que l'archipel ait été secoué par des troubles politiques et des conflits internes depuis lors.
-
-Depuis leur indépendance, les Comores ont fait face à de nombreux défis, notamment des troubles politiques, des tensions ethniques, des difficultés économiques et des catastrophes naturelles. Malgré ces défis, les Comores ont progressé dans de nombreux domaines, y compris l'éducation, la santé et le développement économique. Aujourd'hui, les Comores sont un pays diversifié et dynamique, avec une population jeune et une culture vibrante, qui continue de s'adapter et de prospérer dans un monde en constante évolution.
-Les Comores, un archipel de quatre îles situé dans l'océan Indien, ont une histoire riche et complexe qui remonte à des millénaires. Les premières traces d'occupation humaine remontent à environ 2000 av. J.-C., lorsque des populations bantoues venues d'Afrique continentale ont commencé à s'installer dans la région. Ces premiers habitants ont développé des sociétés agricoles prospères, vivant en harmonie avec la nature luxuriante de l'archipel, et établissant des échanges avec d'autres civilisations de l'océan Indien.
-
-L'histoire des Comores est étroitement liée à celle des grands empires et des puissances maritimes qui ont exercé leur influence dans la région. Au cours des siècles, les Comores ont été visitées et contrôlées par des navigateurs arabes, des marchands persans, des explorateurs européens et des colons français. Ces interactions ont façonné la culture, la langue et la société comoriennes, créant un mélange unique d'influences africaines, arabes et européennes.
-
-Au 15e siècle, les Comores sont devenues un important centre de commerce d'épices, d'esclaves et d'autres produits précieux, attirant l'attention des puissances coloniales européennes. Les Portugais furent parmi les premiers à explorer l'archipel, suivi par les Français, les Britanniques et les Hollandais. Cependant, c'est la France qui finit par établir un contrôle durable sur les Comores au 19e siècle, en faisant une colonie française en 1912.
-
-L'histoire coloniale des Comores a été marquée par l'exploitation économique, la domination politique et la résistance des populations locales. Malgré les efforts de la France pour intégrer les Comores dans son empire colonial, de nombreux habitants ont maintenu leur identité culturelle et leur lutte pour l'indépendance. Cette lutte a finalement abouti à l'indépendance des Comores en 1975, bien que l'archipel ait été secoué par des troubles politiques et des conflits internes depuis lors.
-
-Depuis leur indépendance, les Comores ont fait face à de nombreux défis, notamment des troubles politiques, des tensions ethniques, des difficultés économiques et des catastrophes naturelles. Malgré ces défis, les Comores ont progressé dans de nombreux domaines, y compris l'éducation, la santé et le développement économique. Aujourd'hui, les Comores sont un pays diversifié et dynamique, avec une population jeune et une culture vibrante, qui continue de s'adapter et de prospérer dans un monde en constante évolution.
-Les Comores, un archipel de quatre îles situé dans l'océan Indien, ont une histoire riche et complexe qui remonte à des millénaires. Les premières traces d'occupation humaine remontent à environ 2000 av. J.-C., lorsque des populations bantoues venues d'Afrique continentale ont commencé à s'installer dans la région. Ces premiers habitants ont développé des sociétés agricoles prospères, vivant en harmonie avec la nature luxuriante de l'archipel, et établissant des échanges avec d'autres civilisations de l'océan Indien.
-
-L'histoire des Comores est étroitement liée à celle des grands empires et des puissances maritimes qui ont exercé leur influence dans la région. Au cours des siècles, les Comores ont été visitées et contrôlées par des navigateurs arabes, des marchands persans, des explorateurs européens et des colons français. Ces interactions ont façonné la culture, la langue et la société comoriennes, créant un mélange unique d'influences africaines, arabes et européennes.
-
-Au 15e siècle, les Comores sont devenues un important centre de commerce d'épices, d'esclaves et d'autres produits précieux, attirant l'attention des puissances coloniales européennes. Les Portugais furent parmi les premiers à explorer l'archipel, suivi par les Français, les Britanniques et les Hollandais. Cependant, c'est la France qui finit par établir un contrôle durable sur les Comores au 19e siècle, en faisant une colonie française en 1912.
-
-L'histoire coloniale des Comores a été marquée par l'exploitation économique, la domination politique et la résistance des populations locales. Malgré les efforts de la France pour intégrer les Comores dans son empire colonial, de nombreux habitants ont maintenu leur identité culturelle et leur lutte pour l'indépendance. Cette lutte a finalement abouti à l'indépendance des Comores en 1975, bien que l'archipel ait été secoué par des troubles politiques et des conflits internes depuis lors.
-
-Depuis leur indépendance, les Comores ont fait face à de nombreux défis, notamment des troubles politiques, des tensions ethniques, des difficultés économiques et des catastrophes naturelles. Malgré ces défis, les Comores ont progressé dans de nombreux domaines, y compris l'éducation, la santé et le développement économique. Aujourd'hui, les Comores sont un pays diversifié et dynamique, avec une population jeune et une culture vibrante, qui continue de s'adapter et de prospérer dans un monde en constante évolution.
-Les Comores, un archipel de quatre îles situé dans l'océan Indien, ont une histoire riche et complexe qui remonte à des millénaires. Les premières traces d'occupation humaine remontent à environ 2000 av. J.-C., lorsque des populations bantoues venues d'Afrique continentale ont commencé à s'installer dans la région. Ces premiers habitants ont développé des sociétés agricoles prospères, vivant en harmonie avec la nature luxuriante de l'archipel, et établissant des échanges avec d'autres civilisations de l'océan Indien.
-
-L'histoire des Comores est étroitement liée à celle des grands empires et des puissances maritimes qui ont exercé leur influence dans la région. Au cours des siècles, les Comores ont été visitées et contrôlées par des navigateurs arabes, des marchands persans, des explorateurs européens et des colons français. Ces interactions ont façonné la culture, la langue et la société comoriennes, créant un mélange unique d'influences africaines, arabes et européennes.
-
-Au 15e siècle, les Comores sont devenues un important centre de commerce d'épices, d'esclaves et d'autres produits précieux, attirant l'attention des puissances coloniales européennes. Les Portugais furent parmi les premiers à explorer l'archipel, suivi par les Français, les Britanniques et les Hollandais. Cependant, c'est la France qui finit par établir un contrôle durable sur les Comores au 19e siècle, en faisant une colonie française en 1912.
-
-L'histoire coloniale des Comores a été marquée par l'exploitation économique, la domination politique et la résistance des populations locales. Malgré les efforts de la France pour intégrer les Comores dans son empire colonial, de nombreux habitants ont maintenu leur identité culturelle et leur lutte pour l'indépendance. Cette lutte a finalement abouti à l'indépendance des Comores en 1975, bien que l'archipel ait été secoué par des troubles politiques et des conflits internes depuis lors.
-
-Depuis leur indépendance, les Comores ont fait face à de nombreux défis, notamment des troubles politiques, des tensions ethniques, des difficultés économiques et des catastrophes naturelles. Malgré ces défis, les Comores ont progressé dans de nombreux domaines, y compris l'éducation, la santé et le développement économique. Aujourd'hui, les Comores sont un pays diversifié et dynamique, avec une population jeune et une culture vibrante, qui continue de s'adapter et de prospérer dans un monde en constante évolution.
-Les Comores, un archipel de quatre îles situé dans l'océan Indien, ont une histoire riche et complexe qui remonte à des millénaires. Les premières traces d'occupation humaine remontent à environ 2000 av. J.-C., lorsque des populations bantoues venues d'Afrique continentale ont commencé à s'installer dans la région. Ces premiers habitants ont développé des sociétés agricoles prospères, vivant en harmonie avec la nature luxuriante de l'archipel, et établissant des échanges avec d'autres civilisations de l'océan Indien.
-
-L'histoire des Comores est étroitement liée à celle des grands empires et des puissances maritimes qui ont exercé leur influence dans la région. Au cours des siècles, les Comores ont été visitées et contrôlées par des navigateurs arabes, des marchands persans, des explorateurs européens et des colons français. Ces interactions ont façonné la culture, la langue et la société comoriennes, créant un mélange unique d'influences africaines, arabes et européennes.
-
-Au 15e siècle, les Comores sont devenues un important centre de commerce d'épices, d'esclaves et d'autres produits précieux, attirant l'attention des puissances coloniales européennes. Les Portugais furent parmi les premiers à explorer l'archipel, suivi par les Français, les Britanniques et les Hollandais. Cependant, c'est la France qui finit par établir un contrôle durable sur les Comores au 19e siècle, en faisant une colonie française en 1912.
-
-L'histoire coloniale des Comores a été marquée par l'exploitation économique, la domination politique et la résistance des populations locales. Malgré les efforts de la France pour intégrer les Comores dans son empire colonial, de nombreux habitants ont maintenu leur identité culturelle et leur lutte pour l'indépendance. Cette lutte a finalement abouti à l'indépendance des Comores en 1975, bien que l'archipel ait été secoué par des troubles politiques et des conflits internes depuis lors.
-
-Depuis leur indépendance, les Comores ont fait face à de nombreux défis, notamment des troubles politiques, des tensions ethniques, des difficultés économiques et des catastrophes naturelles. Malgré ces défis, les Comores ont progressé dans de nombreux domaines, y compris l'éducation, la santé et le développement économique. Aujourd'hui, les Comores sont un pays diversifié et dynamique, avec une population jeune et une culture vibrante, qui continue de s'adapter et de prospérer dans un monde en constante évolution.
-Les Comores, un archipel de quatre îles situé dans l'océan Indien, ont une histoire riche et complexe qui remonte à des millénaires. Les premières traces d'occupation humaine remontent à environ 2000 av. J.-C., lorsque des populations bantoues venues d'Afrique continentale ont commencé à s'installer dans la région. Ces premiers habitants ont développé des sociétés agricoles prospères, vivant en harmonie avec la nature luxuriante de l'archipel, et établissant des échanges avec d'autres civilisations de l'océan Indien.
-
-L'histoire des Comores est étroitement liée à celle des grands empires et des puissances maritimes qui ont exercé leur influence dans la région. Au cours des siècles, les Comores ont été visitées et contrôlées par des navigateurs arabes, des marchands persans, des explorateurs européens et des colons français. Ces interactions ont façonné la culture, la langue et la société comoriennes, créant un mélange unique d'influences africaines, arabes et européennes.
-
-Au 15e siècle, les Comores sont devenues un important centre de commerce d'épices, d'esclaves et d'autres produits précieux, attirant l'attention des puissances coloniales européennes. Les Portugais furent parmi les premiers à explorer l'archipel, suivi par les Français, les Britanniques et les Hollandais. Cependant, c'est la France qui finit par établir un contrôle durable sur les Comores au 19e siècle, en faisant une colonie française en 1912.
-
-L'histoire coloniale des Comores a été marquée par l'exploitation économique, la domination politique et la résistance des populations locales. Malgré les efforts de la France pour intégrer les Comores dans son empire colonial, de nombreux habitants ont maintenu leur identité culturelle et leur lutte pour l'indépendance. Cette lutte a finalement abouti à l'indépendance des Comores en 1975, bien que l'archipel ait été secoué par des troubles politiques et des conflits internes depuis lors.
-
-Depuis leur indépendance, les Comores ont fait face à de nombreux défis, notamment des troubles politiques, des tensions ethniques, des difficultés économiques et des catastrophes naturelles. Malgré ces défis, les Comores ont progressé dans de nombreux domaines, y compris l'éducation, la santé et le développement économique. Aujourd'hui, les Comores sont un pays diversifié et dynamique, avec une population jeune et une culture vibrante, qui continue de s'adapter et de prospérer dans un monde en constante évolution.
-</p>
-
-    </>
-  )
-}
+export default About;

@@ -53,6 +53,31 @@
   .Navbar > .nav-toggle {
     display: none;
   }
+  /* Barre supérieure pour afficher la date */
+  /* .navbar-top-bar {
+    background-color: #f7f2f2; 
+    color: #0c0b0b; 
+    text-align: right; 
+    padding: 5px 15px; 
+    font-size: 14px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+  }
+  
+
+
+.Navbar {
+  top: 30px; 
+} */
+
+
 
   @media only screen and (max-width: 600px) {
       .Navbar > .nav-items {
